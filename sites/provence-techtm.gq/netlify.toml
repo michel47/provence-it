@@ -1,17 +1,17 @@
 #
 # see also [*](https://docs.netlify.com/configure-builds/file-based-configuration/)
-[build]
-  ignore = "git diff --quiet HEAD^ HEAD sites/provence-techtm.gq/"
-  command = "id; date; hostname; df .; du -h ."
-  base = "sites/provence-techtm.gq"
+#[build]
+#  ignore = "git diff --quiet HEAD^ HEAD sites/provence-techtm.gq/"
+#  command = "id; date; hostname; df .; du -h ."
+#  base = "sites/provence-techtm.gq"
 
 # Production context:
 # All deploys from the main repository branch
 # will inherit these settings.
-[context.production]
-  command = "bundle jekyll build"
-  base = "sites/provence-techtm.gq"
-  [context.production.environment]
-    JEKYLL_ENV = "production"
+#[context.production]
+#  command = "bundle jekyll build"
+#  base = "sites/provence-techtm.gq"
+#  [context.production.environment]
+#    JEKYLL_ENV = "production"
 #    ACCESS_TOKEN = "super secret"
 
