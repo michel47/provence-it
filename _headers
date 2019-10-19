@@ -1,0 +1,5 @@
+
+# see [*](https://www.netlify.com/blog/2017/04/07/selective-password-protection/)
+
+/*
+        Basic-Auth: admin:password
