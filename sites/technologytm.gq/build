@@ -1,0 +1,5 @@
+#
+rm Gemfile.lock
+bundle update
+bundle exec jekyll build
+echo done.

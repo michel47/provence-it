@@ -1,0 +1,7 @@
+--- # jekyll config
+
+title: Technology sites
+url: http://technology™.gq
+
+exclude: 
+ - build
