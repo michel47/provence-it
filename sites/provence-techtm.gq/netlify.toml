@@ -2,6 +2,7 @@
 # see also [*](https://docs.netlify.com/configure-builds/file-based-configuration/)
 [build]
   ignore = "git diff --quiet HEAD^ HEAD sites/provence-techtm.gq/"
+  command = "id; date; hostname; df .; du -h ."
 
 # Production context:
 # All deploys from the main repository branch
