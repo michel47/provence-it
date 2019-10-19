@@ -1,15 +1,21 @@
+---
+framaid: techtm
+jsrelease: 1.5
+cssrel: 1.4
+netname: objective-golick-712c7d
+---
 <!DOCTYPE html><html><head>
-<meta http-equiv="Access-Control-Allow-Origin" content="htechtm.gq"/>
+<meta http-equiv="Access-Control-Allow-Origin" content="{{ site.url}}"/>
 <meta charset="utf8">
 <!--
  vim: nospell
 <link href="https://cdn.statically.io/gh/iglake/cssjs/master/css/style.css" rel="stylesheet" type="text/css">
 -->
 <link href="https://www.google.com/s2/favicons?domain=framapad.org" rel="shortcut icon" type="image/png" media="all">
-<link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@latest/css/style.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@v{{page.cssrel}}/css/style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css" media="all">
 </head><body>
-<div id="hero" class="first content"> Technologies for humanity </div>
+<div id="hero" class="first content"> %NAME% </div>
 <div id="rendered" class=content></div>
 <br>
 <div id=panel><!-- ---------------------------------------------- -->
@@ -31,11 +37,22 @@ this web page.
 </div>
 
 <br>source: <a href="#" class=include>file</a>.
- made w/ <a href="#" target=_blank class=frama>♡</a>.
+ made w/ <a href="{{ framaid }}" target=_blank class=frama>♡</a>.
 
 <!-- ------------------------------------------------------------ -->
+{% if jekyll.environment != 'production' %}
+<script> console.log('/!\\ NOT Production: {{jekyll.environment}}')</script>
+<script src=http://ocean:8088/js/inc-fp.js></script>
+{% else %}
 <script> console.log('// Jekyll Environment: {{jekyll.environment}}')</script>
+<!--
+src=http://iphs.ga/js/inc-fp.js
+src=http://ocean.local:8088/GITrepo/iglake/cssjs/js/dist/inc-fp.js
+src=https://cdn.jsdelivr.net/gh/iglake/js@master/dist/inc-fp.js
+src=https://cdn.jsdelivr.net/gh/iglake/js@19f340a/dist/inc-fp.js
+-->
 <script
-src=https://cdn.jsdelivr.net/gh/iglake/js@latest/dist/inc-fp.js
+src=https://cdn.jsdelivr.net/gh/iglake/js@{{page.jsrelease}}/dist/inc-fp.js
 ></script>
+{% endif %}
 <!-- ------------------------------------------------------------ -->
