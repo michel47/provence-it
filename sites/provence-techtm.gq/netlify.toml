@@ -3,12 +3,13 @@
 [build]
   ignore = "git diff --quiet HEAD^ HEAD sites/provence-techtm.gq/"
   command = "id; date; hostname; df .; du -h ."
+  base = "sites/provence-techtm.gq"
 
 # Production context:
 # All deploys from the main repository branch
 # will inherit these settings.
 [context.production]
-  command = "jekyll build"
+  command = "bundle jekyll build"
   base = "sites/provence-techtm.gq"
   [context.production.environment]
     JEKYLL_ENV = "production"
